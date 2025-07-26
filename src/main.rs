@@ -5,7 +5,6 @@
  * LICENSE file in the root directory of this source tree.
  */
 
-#![feature(proc_macro_hygiene, decl_macro)]
 
 #[macro_use]
 extern crate rocket;
@@ -33,6 +32,11 @@ fn search(cmd: String) -> Redirect {
     Redirect::to(redirect_url)
 }
 
-fn main() {
-    rocket::ignite().mount("/", routes![index, search]).launch();
+#[rocket::main]
+async fn main() -> Result<(), rocket::Error> {
+    let _rocket = rocket::build()
+        .mount("/", routes![index, search])
+        .launch()
+        .await?;
+    Ok(())
 }
