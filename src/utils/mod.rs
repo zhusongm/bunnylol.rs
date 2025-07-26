@@ -5,8 +5,11 @@
  * LICENSE file in the root directory of this source tree.
  */
 
-pub mod google;
+pub mod devbunny;
 pub mod github;
+pub mod google;
+pub mod gmail;
+pub mod reddit;
 pub mod twitter;
 
 pub fn get_command_from_query_string(query_string: &str) -> &str {
