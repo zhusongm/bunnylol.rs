@@ -5,7 +5,7 @@
  * LICENSE file in the root directory of this source tree.
  */
 
-use percent_encoding::{utf8_percent_encode, NON_ALPHANUMERIC};
+use percent_encoding::{NON_ALPHANUMERIC, utf8_percent_encode};
 
 pub fn construct_devbunny_url(query_string: &str) -> String {
     let cmd_part = if query_string.starts_with("devbunny ") {

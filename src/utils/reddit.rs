@@ -7,7 +7,7 @@
 
 extern crate percent_encoding;
 
-use percent_encoding::{utf8_percent_encode, AsciiSet, CONTROLS};
+use percent_encoding::{AsciiSet, CONTROLS, utf8_percent_encode};
 
 const FRAGMENT: &AsciiSet = &CONTROLS.add(b' ').add(b'"').add(b'<').add(b'>').add(b'`');
 
@@ -39,7 +39,10 @@ mod tests {
     #[test]
     fn test_construct_reddit_url_subreddit() {
         let fake_query = "r/programming";
-        assert_eq!(construct_reddit_url(fake_query), "https://reddit.com/r/programming");
+        assert_eq!(
+            construct_reddit_url(fake_query),
+            "https://reddit.com/r/programming"
+        );
     }
 
     #[test]

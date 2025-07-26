@@ -7,8 +7,8 @@
 
 pub mod devbunny;
 pub mod github;
-pub mod google;
 pub mod gmail;
+pub mod google;
 pub mod reddit;
 pub mod twitter;
 
