@@ -1,11 +1,12 @@
 [package]
 name = "rusty-bunny"
 version = "0.1.0"
-authors = ["Joe Previte <jprevite@fb.com>"]
-edition = "2018"
+authors = ["Joe Previte <jprevite@fb.com>", "Aaron Lichtman <alichtman@meta.com>"]
+edition = "2024"
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
-rocket = "0.4.5"
-percent-encoding = "2.1.0"
+rocket = { version = "0.5", features = ["json"] }
+percent-encoding = "2.3"
+tokio = { version = "1", features = ["macros"] }

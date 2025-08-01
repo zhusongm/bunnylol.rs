@@ -1,12 +1,8 @@
-/*
- * Copyright (c) Facebook, Inc. and its affiliates.
- *
- * This source code is licensed under the MIT license found in the
- * LICENSE file in the root directory of this source tree.
- */
-
-pub mod google;
+pub mod devbunny;
 pub mod github;
+pub mod gmail;
+pub mod google;
+pub mod reddit;
 pub mod twitter;
 
 pub fn get_command_from_query_string(query_string: &str) -> &str {
