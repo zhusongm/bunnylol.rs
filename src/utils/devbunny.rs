@@ -1,10 +1,3 @@
-/*
- * Copyright (c) Aaron Lichtman
- *
- * This source code is licensed under the MIT license found in the
- * LICENSE file in the root directory of this source tree.
- */
-
 use percent_encoding::{NON_ALPHANUMERIC, utf8_percent_encode};
 
 pub fn construct_devbunny_url(query_string: &str) -> String {
