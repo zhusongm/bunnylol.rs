@@ -16,6 +16,7 @@ fn search(cmd: &str) -> Redirect {
         "tw" => utils::twitter::construct_twitter_url(cmd),
         "mail" => utils::gmail::construct_gmail_url(cmd),
         "r" => utils::reddit::construct_reddit_url(cmd),
+        "rei" => utils::rei::construct_rei_url(cmd),
         _ => utils::google::construct_google_search_url(cmd),
     };
 
