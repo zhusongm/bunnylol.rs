@@ -1,9 +1,5 @@
-pub mod devbunny;
-pub mod github;
-pub mod gmail;
-pub mod google;
-pub mod reddit;
-pub mod twitter;
+pub mod bunnylol_command;
+pub mod url_encoding;
 
 pub fn get_command_from_query_string(query_string: &str) -> &str {
     if query_string.contains(' ') {

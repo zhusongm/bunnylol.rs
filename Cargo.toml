@@ -1,5 +1,5 @@
 [package]
-name = "rusty-bunny"
+name = "bunnylol"
 version = "0.1.0"
 authors = ["Joe Previte <jprevite@fb.com>", "Aaron Lichtman <alichtman@meta.com>"]
 edition = "2024"
