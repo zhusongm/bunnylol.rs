@@ -10,3 +10,5 @@ edition = "2024"
 rocket = { version = "0.5", features = ["json"] }
 percent-encoding = "2.3"
 tokio = { version = "1", features = ["macros"] }
+shuttle-runtime = "0.57.0"
+shuttle-rocket = "0.57.0"

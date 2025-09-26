@@ -1,2 +1,5 @@
 /target/*
 !/target/release
+/target
+.shuttle*
+Secrets*.toml

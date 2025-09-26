@@ -17,8 +17,8 @@ fn search(cmd: &str) -> Redirect {
     Redirect::to(redirect_url)
 }
 
-#[rocket::main]
-async fn main() -> Result<(), rocket::Error> {
-    let _rocket = rocket::build().mount("/", routes![search]).launch().await?;
-    Ok(())
+#[shuttle_runtime::main]
+async fn main() -> shuttle_rocket::ShuttleRocket{
+    let _rocket = rocket::build().mount("/", routes![search]);
+    Ok(_rocket.into())
 }
