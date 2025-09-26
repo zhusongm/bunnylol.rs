@@ -9,6 +9,8 @@ pub mod google;
 pub mod reddit;
 pub mod rei;
 pub mod twitter;
+pub mod googledocs;
+pub mod confluence;
 
 // Re-export the command structs for convenience
 pub use devbunny::DevBunnyCommand;
@@ -18,3 +20,5 @@ pub use google::GoogleCommand;
 pub use reddit::RedditCommand;
 pub use rei::REICommand;
 pub use twitter::TwitterCommand;
+pub use googledocs::GDocsCommand;
+pub use confluence::ConfluenceCommand;

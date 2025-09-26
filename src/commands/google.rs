@@ -6,7 +6,7 @@ use crate::utils::url_encoding::build_search_url;
 pub struct GoogleCommand;
 
 impl BunnylolCommand for GoogleCommand {
-    const COMMAND: &'static str = ""; // Empty command means it's the default
+    const COMMAND: &'static str = "g";
 
     fn process_args(args: &str) -> String {
         build_search_url("https://google.com/search", "q", args)
@@ -20,7 +20,7 @@ mod tests {
     #[test]
     fn test_google_command_simple() {
         assert_eq!(
-            GoogleCommand::process_args("hello"),
+            GoogleCommand::process_args("g hello"),
             "https://google.com/search?q=hello"
         );
     }
@@ -28,7 +28,7 @@ mod tests {
     #[test]
     fn test_google_command_with_spaces() {
         assert_eq!(
-            GoogleCommand::process_args("hello world"),
+            GoogleCommand::process_args("g hello world"),
             "https://google.com/search?q=hello%20world"
         );
     }

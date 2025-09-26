@@ -37,10 +37,13 @@ impl BunnylolCommandRegistry {
             cmd if TwitterCommand::matches_command(cmd) => TwitterCommand::process_args(full_args),
             cmd if RedditCommand::matches_command(cmd) => RedditCommand::process_args(full_args),
             cmd if GmailCommand::matches_command(cmd) => GmailCommand::process_args(full_args),
+            cmd if GDocsCommand::matches_command(cmd) => GDocsCommand::process_args(full_args),
+            cmd if ConfluenceCommand::matches_command(cmd) => ConfluenceCommand::process_args(full_args),
             cmd if DevBunnyCommand::matches_command(cmd) => {
                 DevBunnyCommand::process_args(full_args)
             }
             cmd if REICommand::matches_command(cmd) => REICommand::process_args(full_args),
+            cmd if GoogleCommand::matches_command(cmd) => GoogleCommand::process_args(full_args),
             _ => GoogleCommand::process_args(full_args),
         }
     }
