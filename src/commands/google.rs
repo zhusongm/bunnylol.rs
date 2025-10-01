@@ -9,7 +9,8 @@ impl BunnylolCommand for GoogleCommand {
     const COMMAND: &'static str = "g";
 
     fn process_args(args: &str) -> String {
-        build_search_url("https://google.com/search", "q", args)
+        let query = Self::get_command_args(args);
+        build_search_url("https://google.com/search", "q", query)
     }
 }
 

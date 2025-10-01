@@ -120,13 +120,23 @@ This requires VSCode, Docker and the Remote Development extension pack. For more
 
 ### Running
 
-1. Run the project
+1. Install shuttle and log in (for new containers only)
 ```sh
-cargo run
+cargo install cargo-shuttle
 ```
-2. Visit [localhost:8000](http://localhost:8000/)
-3. To test a command, go to [localhost:8000/search?cmd=tw](http://localhost:8000/search?cmd=tw) and you should be redirected to Twitter
-
+```sh
+shuttle login
+```
+2. Run the project
+```sh
+shuttle run
+```
+3. Visit [localhost:8000](http://localhost:8000/)
+4. To test a command, go to [localhost:8000/search?cmd=tw](http://localhost:8000/search?cmd=tw) and you should be redirected to Twitter
+5. Publish to prod
+```sh
+shuttle deploy
+```
 ### Testing
 
 Run the following command

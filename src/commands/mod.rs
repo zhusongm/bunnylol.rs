@@ -11,6 +11,7 @@ pub mod rei;
 pub mod twitter;
 pub mod googledocs;
 pub mod confluence;
+pub mod groups;
 
 // Re-export the command structs for convenience
 pub use devbunny::DevBunnyCommand;
@@ -22,3 +23,4 @@ pub use rei::REICommand;
 pub use twitter::TwitterCommand;
 pub use googledocs::GDocsCommand;
 pub use confluence::ConfluenceCommand;
+pub use groups::GroupsCommand;
