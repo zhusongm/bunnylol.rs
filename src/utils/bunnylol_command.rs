@@ -44,6 +44,7 @@ impl BunnylolCommandRegistry {
             }
             cmd if REICommand::matches_command(cmd) => REICommand::process_args(full_args),
             cmd if GroupsCommand::matches_command(cmd) => GroupsCommand::process_args(full_args),
+            cmd if WorkdayCommand::matches_command(cmd) => WorkdayCommand::process_args(full_args),
             cmd if GoogleCommand::matches_command(cmd) => GoogleCommand::process_args(full_args),
             _ => GoogleCommand::process_args(full_args),
         }

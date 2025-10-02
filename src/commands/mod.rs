@@ -12,6 +12,7 @@ pub mod twitter;
 pub mod googledocs;
 pub mod confluence;
 pub mod groups;
+pub mod workday;
 
 // Re-export the command structs for convenience
 pub use devbunny::DevBunnyCommand;
@@ -24,3 +25,4 @@ pub use twitter::TwitterCommand;
 pub use googledocs::GDocsCommand;
 pub use confluence::ConfluenceCommand;
 pub use groups::GroupsCommand;
+pub use workday::WorkdayCommand;
