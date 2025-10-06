@@ -13,6 +13,7 @@ pub mod googledocs;
 pub mod confluence;
 pub mod groups;
 pub mod workday;
+pub mod calendar;
 
 // Re-export the command structs for convenience
 pub use devbunny::DevBunnyCommand;
@@ -26,3 +27,4 @@ pub use googledocs::GDocsCommand;
 pub use confluence::ConfluenceCommand;
 pub use groups::GroupsCommand;
 pub use workday::WorkdayCommand;
+pub use calendar::CalendarCommand;
